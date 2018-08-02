@@ -24,6 +24,9 @@
                                 <color key="backgroundColor" red="0.90980392156862744" green="0.27058823529411763" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="64"/>
                                 <state key="normal" title="😎"/>
+                                <connections>
+                                    <action selector="touchCards:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7mR-9s-9gt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.16862745098039217" green="0.1803921568627451" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
