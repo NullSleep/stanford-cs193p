@@ -20,6 +20,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func touchCard(_ sender: UIButton) {
+        print("Technology has forever changed the world we live in. We're online, in one way or another, all day long. Our phones and computers have become reflections of our personalities, our interests, and our identities. They hold much that is important to us. James Comey")
+    }
+    
+    func flipCard(withEmoji emoji: String, on button: UIButton) {
+        
+    }
 }
-
