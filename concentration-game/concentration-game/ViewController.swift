@@ -13,7 +13,8 @@ class ViewController: UIViewController {
     // MARK: - Instance variables
     
     var flipCount = 0 {
-        // Property observers. The code is observing change like this.
+        // Property observers. The code is observing change like this. Property observer should be used a
+        // lot to update change from the UI.
         didSet {
             flipCountLabel.text = "Flips: \(flipCount)"
         }
@@ -21,6 +22,9 @@ class ViewController: UIViewController {
     
     // Swift can't infer the type that comes fom a UI file
     @IBOutlet weak var flipCountLabel: UILabel!
+    
+    // @IBOutlet var cardBuTTons: [UIButton]!
+    @IBOutlet var cardBuTTons: Array<UIButton>
     
     // MAK: - View's lifecycle
     
@@ -37,11 +41,6 @@ class ViewController: UIViewController {
     @IBAction func touchCard(_ sender: UIButton) {
         flipCount += 1
         flipCard(withEmoji: "🛠", on: sender)
-    }
-    
-    @IBAction func touchSecondCarrd(_ sender: UIButton) {
-        flipCount += 1
-        flipCard(withEmoji: "🚄", on: sender)
     }
     
     // MNARK: - Private mehtods
