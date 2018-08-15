@@ -13,6 +13,7 @@
 		23A7B1702120242100C37667 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A7B16F2120242100C37667 /* Assets.xcassets */; };
 		23A7B1732120242100C37667 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A7B1712120242100C37667 /* LaunchScreen.storyboard */; };
 		23A7B17E2120242100C37667 /* concentration_gameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A7B17D2120242100C37667 /* concentration_gameUITests.swift */; };
+		23A7B1CB2124BD6E00C37667 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A7B1CA2124BD6E00C37667 /* UIColorExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		23A7B1792120242100C37667 /* concentration-gameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "concentration-gameUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A7B17D2120242100C37667 /* concentration_gameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = concentration_gameUITests.swift; sourceTree = "<group>"; };
 		23A7B17F2120242100C37667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23A7B1CA2124BD6E00C37667 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				23A7B188212027FD00C37667 /* Supporting Files */,
 				23A7B16A2120242000C37667 /* ViewController.swift */,
+				23A7B1CA2124BD6E00C37667 /* UIColorExtension.swift */,
 				23A7B16C2120242000C37667 /* Main.storyboard */,
 				23A7B1742120242100C37667 /* Info.plist */,
 			);
@@ -207,6 +210,7 @@
 			files = (
 				23A7B16B2120242000C37667 /* ViewController.swift in Sources */,
 				23A7B1692120242000C37667 /* AppDelegate.swift in Sources */,
+				23A7B1CB2124BD6E00C37667 /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
