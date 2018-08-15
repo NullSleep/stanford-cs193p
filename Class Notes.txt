@@ -1,9 +1,0 @@
-*** WHAT IS IOS ***
-
-iOS is UNIX. It is a BSD variant of UNIX. It's written in C.
-
-Lower to higher layers of iOS:
-1. CORE OS: OS X Kernel, Mach 3.0, BSD, Sockets, Security, Power management, Keychain access, Certificates, File system, Bonjour
-2. CORE SERVICES: Collections, Address Book, Networking, File access, SQLite, Core location, Net services, Threading, Preferences, URL Utilities
-3. MEDIA: Core audio, OpenAL, Audio mixing, Audio recording, Video playback, JPEG, PNG, TIFF, PDF, Quartz (2D), Core animation, OpenGL ES, Metal
-4. COCOA TOUCH: Multi-touch, core motion, view hierarchy, localization, controls, alerts, web view, map kit, image picker, camera

@@ -21,10 +21,16 @@ class ViewController: UIViewController {
     }
 
     @IBAction func touchCard(_ sender: UIButton) {
-        print("Technology has forever changed the world we live in. We're online, in one way or another, all day long. Our phones and computers have become reflections of our personalities, our interests, and our identities. They hold much that is important to us. James Comey")
+        flipCard(withEmoji: "🛠", on: sender)
     }
     
     func flipCard(withEmoji emoji: String, on button: UIButton) {
-        
+        if button.currentTitle == emoji {
+            button.setTitle("", for: UIControlState.normal)
+            button.backgroundColor = #colorLiteral(red: 0.3098039329, green: 0.01568627544, blue: 0.1294117719, alpha: 1)
+        } else {
+            button.setTitle("🛠", for: UIControlState.normal)
+             button.backgroundColor = UIColor
+        }
     }
 }
