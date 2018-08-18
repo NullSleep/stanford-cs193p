@@ -23,7 +23,9 @@ class ViewController: UIViewController {
     // Swift can't infer the type that comes fom a UI file
     @IBOutlet weak var flipCountLabel: UILabel!
     
-    @IBOutlet var carButtons: [UIButton]!
+    @IBOutlet var cardButtons: [UIButton]!
+    
+    var emojiChoices = ["🛠", "🚄", "🚉", "✈️", "🛫", "🏎", "⛴", "🛥", "🛩"]
     
     // MAK: - View's lifecycle
     
@@ -39,7 +41,12 @@ class ViewController: UIViewController {
 
     @IBAction func touchCard(_ sender: UIButton) {
         flipCount += 1
-        flipCard(withEmoji: "🛠", on: sender)
+        if let cardNumber = cardButtons.index(of: sender) {
+            print("cardNumber = \(cardNumber)")
+            flipCard(withEmoji: emojiChoices[cardNumber], on: sender)
+        } else {
+            print("Chosen card was on cardButtons")
+        }
     }
     
     // MNARK: - Private mehtods
@@ -48,7 +55,7 @@ class ViewController: UIViewController {
         print("flipcard(withEmoji: \(emoji)")
         if button.currentTitle == emoji {
             button.setTitle("", for: UIControlState.normal)
-            button.backgroundColor = #colorLiteral(red: 0.3098039329, green: 0.01568627544, blue: 0.1294117719, alpha: 1)
+            button.backgroundColor = #colorLiteral(red: 0.8862745098, green: 0.2431372549, blue: 0.3411764706, alpha: 1)
         } else {
             button.setTitle(emoji, for: UIControlState.normal)
             button.backgroundColor = UIColor.hexStringToUIColor(hex: "e23e57")
