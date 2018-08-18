@@ -23,8 +23,7 @@ class ViewController: UIViewController {
     // Swift can't infer the type that comes fom a UI file
     @IBOutlet weak var flipCountLabel: UILabel!
     
-    // @IBOutlet var cardBuTTons: [UIButton]!
-//    @IBOutlet var cardBuTTons: Array<UIButton>
+    @IBOutlet var carButtons: [UIButton]!
     
     // MAK: - View's lifecycle
     
