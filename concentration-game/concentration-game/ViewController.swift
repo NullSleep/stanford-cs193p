@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var flipCountLabel: UILabel!
     
     // @IBOutlet var cardBuTTons: [UIButton]!
-    @IBOutlet var cardBuTTons: Array<UIButton>
+//    @IBOutlet var cardBuTTons: Array<UIButton>
     
     // MAK: - View's lifecycle
     
