@@ -21,6 +21,9 @@ class ViewController: UIViewController {
         }
     }
     
+    // var emoji = Dictionary<Int, String>()
+    var emoji = [Int:String]()
+    
     // Swift can't infer the type that comes fom a UI file
     @IBOutlet weak var flipCountLabel: UILabel!
     
@@ -50,10 +53,9 @@ class ViewController: UIViewController {
     
     func updateViewFromModel() {
         // cardButtons is a sequence of buttons so we can loop through it.
-        // for button in cardButtons {
-        
+        // for button in cardButtons { }
         // Countable range
-        // for index in 0..<cardButtons.count {
+        // for index in 0..<cardButtons.count { }
         
         // Countable range of all the indexes
         for index in cardButtons.indices {
@@ -80,7 +82,18 @@ class ViewController: UIViewController {
         }
     }
     
-    func emoji(for: Card) -> String {
-        return "!!!"
+    func emoji(for card: Card) -> String {
+        // Looking for value in a dictionary always returns an optional
+        // let choosenEmoji = emoji[card.identifier]
+        
+        // Another way of dealing with optionals
+//        if emoji[card.identifier] != nil {
+//            return emoji[card.identifier]!
+//        } else {
+//            return "!!!"
+//        }
+        
+        // This is exactly the same as the above != nil coparison
+        return emoji[card.identifier] ?? "!!!"
     }
 }
