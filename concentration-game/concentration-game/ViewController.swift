@@ -38,13 +38,36 @@ class ViewController: UIViewController {
         flipCount += 1
         if let cardNumber = cardButtons.index(of: sender) {
             print("cardNumber = \(cardNumber)")
-            flipCard(withEmoji: emojiChoices[cardNumber], on: sender)
+            // flipCard(withEmoji: emojiChoices[cardNumber], on: sender)
+            game.chooseCard(at: cardNumber)
+            updateViewFromModel()
         } else {
-            print("Chosen card was on cardButtons")
+            print("Chosen card was not on cardButtons")
         }
     }
     
     // MNARK: - Private mehtods
+    
+    func updateViewFromModel() {
+        // cardButtons is a sequence of buttons so we can loop through it.
+        // for button in cardButtons {
+        
+        // Countable range
+        // for index in 0..<cardButtons.count {
+        
+        // Countable range of all the indexes
+        for index in cardButtons.indices {
+            let button = cardButtons[index]
+            let card = game.cards[index]
+            if card.isFaceUp {
+                button.setTitle(emoji(for: Card), for: UIControlState.normal)
+                button.backgroundColor = UIColor.hexStringToUIColor(hex: "e23e57")
+            } else {
+                button.setTitle("", for: UIControlState.normal)
+                button.backgroundColor = card.isMatched ? #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0) : #colorLiteral(red: 0.8862745098, green: 0.2431372549, blue: 0.3411764706, alpha: 1)
+            }
+        }
+    }
     
     func flipCard(withEmoji emoji: String, on button: UIButton) {
         print("flipcard(withEmoji: \(emoji)")
@@ -56,4 +79,6 @@ class ViewController: UIViewController {
             button.backgroundColor = UIColor.hexStringToUIColor(hex: "e23e57")
         }
     }
+    
+    func
 }
