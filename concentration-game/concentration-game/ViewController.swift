@@ -93,6 +93,19 @@ class ViewController: UIViewController {
 //            return "!!!"
 //        }
         
+        // We'll check if the card  doesn't  exist and assign it a random emoji
+        if emoji[card.identifier] == nil, emojiChoices.count > 0 {
+            // Converting the int value of emojiChoices.count to UInt32 required by the arc4random_uniform function
+            // Then converting back Int
+            let randomIndex = Int(arc4random_uniform(UInt32(emojiChoices.count)))
+            
+            //emoji[card.identifier] = emojiChoices[randomIndex]
+            // Instead of just assigninig the emoji character we remove it also. Since the function remove inmediately
+            // returns what is being removed we can both assign the emoji and delete from the list so it may not reappear
+            // in a later asigment.
+            emoji[card.identifier] = emojiChoices.remove(at: randomIndex)
+        }
+        
         // This is exactly the same as the above != nil coparison
         return emoji[card.identifier] ?? "!!!"
     }
