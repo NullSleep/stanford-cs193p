@@ -29,7 +29,7 @@
                                 <rect key="frame" x="24" y="235" width="69" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.88627450980392153" green="0.24313725490196078" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
                                 <connections>
                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H3u-TT-8Jh"/>
                                 </connections>
@@ -38,7 +38,7 @@
                                 <rect key="frame" x="111" y="235" width="69" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.8862745098" green="0.24313725489999999" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
                                 <connections>
                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TZC-1v-ExM"/>
                                 </connections>
@@ -47,7 +47,7 @@
                                 <rect key="frame" x="197" y="235" width="69" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.8862745098" green="0.24313725489999999" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
                                 <connections>
                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pXk-nD-XUe"/>
                                 </connections>
@@ -56,7 +56,7 @@
                                 <rect key="frame" x="281" y="235" width="69" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.8862745098" green="0.24313725489999999" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
                                 <connections>
                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oBq-W2-gnY"/>
                                 </connections>
@@ -65,7 +65,7 @@
                                 <rect key="frame" x="24" y="327" width="69" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.8862745098" green="0.24313725489999999" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
                                 <connections>
                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mwS-up-Lq6"/>
                                 </connections>
@@ -74,7 +74,7 @@
                                 <rect key="frame" x="111" y="327" width="69" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.8862745098" green="0.24313725489999999" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
                                 <connections>
                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KeX-sX-Etb"/>
                                 </connections>
@@ -83,7 +83,7 @@
                                 <rect key="frame" x="197" y="327" width="69" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.8862745098" green="0.24313725489999999" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
                                 <connections>
                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Vc-9A-czg"/>
                                 </connections>
@@ -92,7 +92,7 @@
                                 <rect key="frame" x="281" y="327" width="69" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.8862745098" green="0.24313725489999999" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
                                 <connections>
                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rzv-YO-VWh"/>
                                 </connections>
@@ -101,7 +101,7 @@
                                 <rect key="frame" x="24" y="416" width="69" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.8862745098" green="0.24313725489999999" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
                                 <connections>
                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F4u-Yf-35r"/>
                                 </connections>
@@ -110,7 +110,7 @@
                                 <rect key="frame" x="111" y="416" width="69" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.8862745098" green="0.24313725489999999" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
                                 <connections>
                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z7d-XA-Rf0"/>
                                 </connections>
@@ -119,7 +119,7 @@
                                 <rect key="frame" x="197" y="416" width="69" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.8862745098" green="0.24313725489999999" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
                                 <connections>
                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jad-Wy-FxK"/>
                                 </connections>
@@ -128,7 +128,7 @@
                                 <rect key="frame" x="281" y="416" width="69" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.8862745098" green="0.24313725489999999" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
                                 <connections>
                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L0l-br-II4"/>
                                 </connections>
@@ -137,7 +137,7 @@
                                 <rect key="frame" x="24" y="504" width="69" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.8862745098" green="0.24313725489999999" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
                                 <connections>
                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C1c-BX-hbi"/>
                                 </connections>
@@ -146,7 +146,7 @@
                                 <rect key="frame" x="111" y="504" width="69" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.8862745098" green="0.24313725489999999" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
                                 <connections>
                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XSQ-8V-n7c"/>
                                 </connections>
@@ -155,7 +155,7 @@
                                 <rect key="frame" x="197" y="504" width="69" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.8862745098" green="0.24313725489999999" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
                                 <connections>
                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iaa-dO-tLp"/>
                                 </connections>
@@ -164,7 +164,7 @@
                                 <rect key="frame" x="281" y="504" width="69" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.8862745098" green="0.24313725489999999" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
                                 <connections>
                                     <action selector="touchCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uz4-Sk-PP1"/>
                                 </connections>
@@ -175,6 +175,22 @@
                     </view>
                     <connections>
                         <outlet property="flipCountLabel" destination="VgQ-kR-AEH" id="SHo-Wa-vgq"/>
+                        <outletCollection property="cardButtons" destination="s52-nx-pd0" collectionClass="NSMutableArray" id="fUk-KZ-RXg"/>
+                        <outletCollection property="cardButtons" destination="Daa-FJ-sOd" collectionClass="NSMutableArray" id="gHN-R6-EKT"/>
+                        <outletCollection property="cardButtons" destination="NYh-r0-5CR" collectionClass="NSMutableArray" id="5Lx-Ny-pgM"/>
+                        <outletCollection property="cardButtons" destination="9OF-A6-SMI" collectionClass="NSMutableArray" id="zEU-O1-sUg"/>
+                        <outletCollection property="cardButtons" destination="9MM-lw-TQk" collectionClass="NSMutableArray" id="Auz-ye-3WT"/>
+                        <outletCollection property="cardButtons" destination="X1a-gF-pUT" collectionClass="NSMutableArray" id="ekt-Xq-Ec7"/>
+                        <outletCollection property="cardButtons" destination="ZGN-iI-HqY" collectionClass="NSMutableArray" id="jhi-6e-sRz"/>
+                        <outletCollection property="cardButtons" destination="VSM-0j-RWZ" collectionClass="NSMutableArray" id="Beg-Dv-K2K"/>
+                        <outletCollection property="cardButtons" destination="OGo-Wd-4Tj" collectionClass="NSMutableArray" id="Klj-8S-GXt"/>
+                        <outletCollection property="cardButtons" destination="rxX-Ya-oEv" collectionClass="NSMutableArray" id="XgQ-nr-EbO"/>
+                        <outletCollection property="cardButtons" destination="Kyn-eh-1ya" collectionClass="NSMutableArray" id="67y-AY-aqp"/>
+                        <outletCollection property="cardButtons" destination="zxR-2v-dr7" collectionClass="NSMutableArray" id="WKI-Da-WMQ"/>
+                        <outletCollection property="cardButtons" destination="NSC-MA-PQS" collectionClass="NSMutableArray" id="wz8-ec-WCe"/>
+                        <outletCollection property="cardButtons" destination="Qvd-iN-vEU" collectionClass="NSMutableArray" id="O0f-EO-5io"/>
+                        <outletCollection property="cardButtons" destination="MAZ-zk-Nk5" collectionClass="NSMutableArray" id="DW1-Nw-1jk"/>
+                        <outletCollection property="cardButtons" destination="JJ0-4l-ueu" collectionClass="NSMutableArray" id="F8W-6I-6bV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

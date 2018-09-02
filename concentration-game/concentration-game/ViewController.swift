@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var cardButtons: [UIButton]!
     
-    var emojiChoices = ["🛠", "🚄", "🚉", "✈️", "🛫", "🏎", "⛴", "🛥", "🛩"]
+    var emojiChoices = ["🛠", "🚄", "🚉", "✈️", "🛫", "🏎", "⛴", "🛥", "🛩", "🚗", "🛰", "🛩",  "🚤", "🚅", "🏍",  "🚲"]
     
     // MAK: - View's lifecycle
     
