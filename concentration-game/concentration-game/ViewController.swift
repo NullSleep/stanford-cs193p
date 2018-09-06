@@ -29,9 +29,9 @@ class ViewController: UIViewController {
     
     @IBOutlet var cardButtons: [UIButton]!
     
-    var emojiChoices = ["🛠", "🚄", "🚉", "✈️", "🛫", "🏎", "⛴", "🛥", "🛩", "🚗", "🛰", "🛩",  "🚤", "🚅", "🏍",  "🚲"]
+    var emojiChoices = ["🚀", "🚄", "🚉", "✈️", "🛫", "🏎", "⛴", "🛥", "🛩", "🚗", "🛰", "🚁",  "🚤", "🚅", "🏍",  "🚲"]
     
-    // MAK: - View's lifecycle
+    // MARK: - View's lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +49,7 @@ class ViewController: UIViewController {
         }
     }
     
-    // MNARK: - Private mehtods
+    // MARK: - Private mehtods
     
     func updateViewFromModel() {
         // cardButtons is a sequence of buttons so we can loop through it.
@@ -96,10 +96,11 @@ class ViewController: UIViewController {
         // We'll check if the card  doesn't  exist and assign it a random emoji
         if emoji[card.identifier] == nil, emojiChoices.count > 0 {
             // Converting the int value of emojiChoices.count to UInt32 required by the arc4random_uniform function
-            // Then converting back Int
+            // Then converting back Int again
             let randomIndex = Int(arc4random_uniform(UInt32(emojiChoices.count)))
             
             //emoji[card.identifier] = emojiChoices[randomIndex]
+            
             // Instead of just assigninig the emoji character we remove it also. Since the function remove inmediately
             // returns what is being removed we can both assign the emoji and delete from the list so it may not reappear
             // in a later asigment.
