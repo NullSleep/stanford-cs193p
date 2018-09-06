@@ -72,6 +72,19 @@ class Concentration {
             // Option 3
             cards += [card, card]
         }
-        // TODO: Shuffle the cards
+        
+        // Shuffling the card array
+        shuffleTheCardArray()
+    }
+    
+    // MARK: - Private mehtods
+    func shuffleTheCardArray(){
+        var res = [Card]()
+        for _ in 0..<cards.count {
+            let rand = Int(arc4random_uniform(UInt32(cards.count)))
+            res.append(cards[rand])
+            cards.remove(at: rand)
+        }
+        cards = res
     }
 }
