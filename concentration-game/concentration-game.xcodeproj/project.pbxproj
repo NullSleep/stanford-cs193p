@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		23093A2E212F631100113F6D /* Concetration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23093A2D212F631100113F6D /* Concetration.swift */; };
 		23093A30212F649600113F6D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23093A2F212F649600113F6D /* Card.swift */; };
+		235E437621431E3D0007B386 /* MiscExercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235E437521431E3D0007B386 /* MiscExercises.swift */; };
 		23A7B1692120242000C37667 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A7B1682120242000C37667 /* AppDelegate.swift */; };
 		23A7B16B2120242000C37667 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A7B16A2120242000C37667 /* ViewController.swift */; };
 		23A7B16E2120242000C37667 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A7B16C2120242000C37667 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		23093A2D212F631100113F6D /* Concetration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concetration.swift; sourceTree = "<group>"; };
 		23093A2F212F649600113F6D /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		235E437521431E3D0007B386 /* MiscExercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscExercises.swift; sourceTree = "<group>"; };
 		23A7B1652120242000C37667 /* concentration-game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "concentration-game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A7B1682120242000C37667 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23A7B16A2120242000C37667 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				23093A2D212F631100113F6D /* Concetration.swift */,
 				23093A2F212F649600113F6D /* Card.swift */,
 				23A7B16A2120242000C37667 /* ViewController.swift */,
+				235E437521431E3D0007B386 /* MiscExercises.swift */,
 				23A7B1CA2124BD6E00C37667 /* UIColorExtension.swift */,
 				23A7B16C2120242000C37667 /* Main.storyboard */,
 				23A7B1742120242100C37667 /* Info.plist */,
@@ -215,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23A7B16B2120242000C37667 /* ViewController.swift in Sources */,
+				235E437621431E3D0007B386 /* MiscExercises.swift in Sources */,
 				23A7B1692120242000C37667 /* AppDelegate.swift in Sources */,
 				23093A30212F649600113F6D /* Card.swift in Sources */,
 				23093A2E212F631100113F6D /* Concetration.swift in Sources */,

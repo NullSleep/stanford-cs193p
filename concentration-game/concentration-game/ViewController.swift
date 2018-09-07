@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     
     // MARK: - Instance variables
+    // Since game depends on another property and it can be intialized inmediately, lazy allows to only intialize until
+    // some ask for it.
     lazy var game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1) / 2)
     
     var flipCount = 0 {
