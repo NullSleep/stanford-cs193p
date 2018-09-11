@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MiscExercise {
+class MiscExercises {
     
     func execute() {
         // MARK: Floating point CountableRange
@@ -44,7 +44,7 @@ class MiscExercise {
         print("The weight is \(size.weight)")
         print("The height is \(getSize().height)")
         
-        // MARK: Computer properties
+        // MARK: Computed properties
         // The value of a property can be computed rahter than stored
         // A typical property looks somehting like this:
 //        var foo: Double
@@ -57,7 +57,27 @@ class MiscExercise {
 //                // do somehting based on the fact that foo has changed to newValue
 //            }
 //        }
-        // It is not necesdary to implement the set (the property then becomes read only
+        // It is not necesary to implement the set (the property then becomes read only
+        
+        // IMPORTANT:
+        // Foo is never stored anywhere instead everytime someone asks for foo it gets calculated with the
+        // code inside get. And everytime someone set the value of foo the code inside set gets executed.
+        // Why are they important? What do you use them for?
+        // A lot of time many properties are derived from other states inside the struct, so you don't
+        // want duplicated information that can get out of sync. So it is better to derive the information.
+        
+        // Keeping up this var up-to-date is just plain error-prone.
+//        var indexOfOneAndOnlyFaceUpCard: Int?
+        // This is safer
+//        var indexOfOneAndOnlyFaceUpCard: Int? {
+//            get {
+//                // Look at all the cards and see if you find only one that's face up if so, return it,
+//                // else return nil
+//            }
+//            set {
+//                // Turn all the cards face down except the card at index newValue
+//            }
+//        }
     }
     
     func getSize() -> (weight: Double, height: Double) {

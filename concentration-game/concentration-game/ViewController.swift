@@ -11,9 +11,22 @@ import UIKit
 class ViewController: UIViewController {
     
     // MARK: - Instance variables
-    // Since game depends on another property and it can be intialized inmediately, lazy allows to only intialize until
-    // some ask for it.
-    lazy var game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1) / 2)
+
+    // Since game depends on another property and it can be intialized inmediately, lazy allows to only intialize until some ask for it.
+//    lazy var game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1) / 2)
+    // Using a lazy property
+    lazy var game = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
+    
+    // Long version
+//    var numberOfPairsOfCards: Int {
+//        get {
+//            return (cardButtons.count + 1) / 2
+//        }
+//    }
+    // Short version. We can do this only because it is read-only (only has a get)
+    var numberOfPairsOfCards: Int {
+        return (cardButtons.count + 1) / 2
+    }
     
     var flipCount = 0 {
         // Property observers. The code is observing change like this. Property observer should be used a
