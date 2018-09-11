@@ -9,14 +9,15 @@
 import Foundation
 
 class Concentration {
-    // MARK: - Public Application Program Interface
+    // MARK: - Application Program Interface
+    
     // var cards = Array<Card>()
-    var cards = [Card]()
+    private(set) var cards = [Card]()
     
     // This index is used to know if there is a card face up and proceede to try to match the currently selected card
     // Making this property computed
 //    var indexOfOneAndOnlyFaceUpCard: Int?
-    var indexOfOneAndOnlyFaceUpCard: Int? {
+    private var indexOfOneAndOnlyFaceUpCard: Int? {
         get {
             // From this declaration optionals always starts at nil
             var foundIndex: Int?
@@ -47,9 +48,11 @@ class Concentration {
 //        } else {
 //            cards[index].isFaceUp = true
 //        }
-        
         // Option 2
         // cards[index].isFaceUp = cards[index].isFaceUp ? false : true
+        
+        // Checks if cards has the index passed.
+        assert(cards.indices.contains(index), "Concentration.chooseCard(at: \(index)): chosen index not in the cards")
         
         // Ignoring all the cards that have been matched
         if !cards[index].isMatched {
@@ -78,8 +81,10 @@ class Concentration {
     }
     
     init(numberOfPairsOfCards: Int) {
-        // Free intializer for the strucs
+        // structs have a dree intializer
         // let card = Card(isFaceUp: , isMatched: , identifier: )
+        
+        assert(numberOfPairsOfCards > 0, "Concentration.init(\(numberOfPairsOfCards)): you must have at least a pair of cards")
         
         for _ in 0..<numberOfPairsOfCards {
             // The concetration game doesn't care about what the identifiers are. It only care it they are unique.
@@ -105,7 +110,7 @@ class Concentration {
     }
     
     // MARK: - Private mehtods
-    func shuffleTheCardArray(){
+    private func shuffleTheCardArray(){
         var res = [Card]()
         for _ in 0..<cards.count {
             let rand = Int(arc4random_uniform(UInt32(cards.count)))

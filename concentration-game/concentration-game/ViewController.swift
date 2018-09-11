@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     // Since game depends on another property and it can be intialized inmediately, lazy allows to only intialize until some ask for it.
 //    lazy var game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1) / 2)
     // Using a lazy property
-    lazy var game = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
+    private lazy var game = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
     
     // Long version
 //    var numberOfPairsOfCards: Int {
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         return (cardButtons.count + 1) / 2
     }
     
-    var flipCount = 0 {
+    private(set) var flipCount = 0 {
         // Property observers. The code is observing change like this. Property observer should be used a
         // lot to update change from the UI.
         didSet {
@@ -40,9 +40,9 @@ class ViewController: UIViewController {
     var emoji = [Int:String]()
     
     // Swift can't infer the type that comes fom a UI file
-    @IBOutlet weak var flipCountLabel: UILabel!
+    @IBOutlet private weak var flipCountLabel: UILabel!
     
-    @IBOutlet var cardButtons: [UIButton]!
+    @IBOutlet private var cardButtons: [UIButton]!
     
     var emojiChoices = ["🚀", "🚄", "🚉", "✈️", "🛫", "🏎", "⛴", "🛥", "🛩", "🚗", "🛰", "🚁",  "🚤", "🚅", "🏍",  "🚲"]
     
@@ -51,8 +51,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-    @IBAction func touchCard(_ sender: UIButton) {
+    
+    // MARK: - Actions
+    
+    @IBAction private func touchCard(_ sender: UIButton) {
         flipCount += 1
         if let cardNumber = cardButtons.index(of: sender) {
             print("cardNumber = \(cardNumber)")
@@ -66,7 +68,7 @@ class ViewController: UIViewController {
     
     // MARK: - Private mehtods
     
-    func updateViewFromModel() {
+    private func updateViewFromModel() {
         // cardButtons is a sequence of buttons so we can loop through it.
         // for button in cardButtons { }
         // Countable range
@@ -86,7 +88,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func flipCard(withEmoji emoji: String, on button: UIButton) {
+    private func flipCard(withEmoji emoji: String, on button: UIButton) {
         print("flipcard(withEmoji: \(emoji)")
         if button.currentTitle == emoji {
             button.setTitle("", for: UIControlState.normal)
@@ -97,7 +99,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func emoji(for card: Card) -> String {
+    private func emoji(for card: Card) -> String {
         // Looking for value in a dictionary always returns an optional
         // let choosenEmoji = emoji[card.identifier]
         

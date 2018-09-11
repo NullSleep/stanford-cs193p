@@ -16,10 +16,10 @@ struct Card {
     var identifier: Int
     
     // Unique Int associated with thre Type rather than individual instance
-    static var indentifierFactory = 0
+    private static var indentifierFactory = 0
     
     // Every time I call it it will return an unique int
-    static func getUniqueIdentifier() -> Int {
+    private static func getUniqueIdentifier() -> Int {
         indentifierFactory += 1
         return indentifierFactory
     }
