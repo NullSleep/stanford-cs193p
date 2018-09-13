@@ -8,7 +8,8 @@
 
 import Foundation
 
-class Concentration {
+// class Concentration {
+struct Concentration {
     // MARK: - Application Program Interface
     
     // var cards = Array<Card>()
@@ -41,7 +42,7 @@ class Concentration {
         }
     }
     
-    func chooseCard(at index: Int) {
+    mutating func chooseCard(at index: Int) {
         // Option 1
 //        if cards[index].isFaceUp {
 //            cards[index].isFaceUp = false
@@ -69,7 +70,7 @@ class Concentration {
                 // Now there are two face up cards, so there is no 'one and only faced up card'
 //                indexOfOneAndOnlyFaceUpCard = nil
             } else {
-                // BOKU: This already done aboove in the indexOfOneAndOnlyFaceUpCard computed variable.
+                // BOKU: This already done above in the indexOfOneAndOnlyFaceUpCard computed variable.
                 // Either no cards or 2 cards are face up
 //                for flipDownIndex in cards.indices {
 //                    cards[flipDownIndex].isFaceUp = false
@@ -110,7 +111,7 @@ class Concentration {
     }
     
     // MARK: - Private mehtods
-    private func shuffleTheCardArray(){
+    mutating private func shuffleTheCardArray(){
         var res = [Card]()
         for _ in 0..<cards.count {
             let rand = Int(arc4random_uniform(UInt32(cards.count)))
