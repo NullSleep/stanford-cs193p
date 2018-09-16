@@ -29,8 +29,7 @@ class ViewController: UIViewController {
         }
     }
     
-    // var emoji = Dictionary<Int, String>()
-    var emoji = [Int:String]()
+    var emoji = [Card:String]()
     
     // Swift can't infer the type that comes fom a UI file
     @IBOutlet private weak var flipCountLabel: UILabel!
@@ -79,18 +78,16 @@ class ViewController: UIViewController {
     private func emoji(for card: Card) -> String {
         
         // We'll check if the card  doesn't  exist and assign it a random emoji
-        if emoji[card.identifier] == nil, emojiChoices.count > 0 {
-        
-            //emoji[card.identifier] = emojiChoices[randomIndex]
+        if emoji[card] == nil, emojiChoices.count > 0 {
             
             // Instead of just assigninig the emoji character we remove it also. Since the function remove inmediately
             // returns what is being removed we can both assign the emoji and delete from the list so it may not reappear
             // in a later asigment.
-            emoji[card.identifier] = emojiChoices.remove(at: emojiChoices.count.arc4Rrandom)
+            emoji[card] = emojiChoices.remove(at: emojiChoices.count.arc4Rrandom)
         }
         
         // This is exactly the same as the above != nil coparison
-        return emoji[card.identifier] ?? "!!!"
+        return emoji[card] ?? "!!!"
     }
 }
 

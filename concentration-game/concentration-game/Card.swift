@@ -10,10 +10,18 @@ import Foundation
 
 // Since this is the Model and it is UI independent it doesn't need to have emoji or jpg or similar UI data
 // This is the behaviour of the card.
-struct Card {
+struct Card: Hashable {
     var isFaceUp = false
     var isMatched = false
     var identifier: Int
+    
+    var hashValue: Int {
+        return identifier
+    }
+    
+    static func ==(lhs: Card, rhs: Card) -> Bool {
+        return lhs.identifier == rhs.identifier
+    }
     
     // Unique Int associated with thre Type rather than individual instance
     private static var indentifierFactory = 0
