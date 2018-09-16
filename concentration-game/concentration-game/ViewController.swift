@@ -12,17 +12,10 @@ class ViewController: UIViewController {
     
     // MARK: - Instance variables
 
-    // Since game depends on another property and it can be intialized inmediately, lazy allows to only intialize until some ask for it.
-//    lazy var game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1) / 2)
-    // Using a lazy property
+    // Using a lazy property. Since game depends on another property and it can be intialized inmediately, lazy allows to
+    // only intialize until some ask for it.
     private lazy var game = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
     
-    // Long version
-//    var numberOfPairsOfCards: Int {
-//        get {
-//            return (cardButtons.count + 1) / 2
-//        }
-//    }
     // Short version. We can do this only because it is read-only (only has a get)
     var numberOfPairsOfCards: Int {
         return (cardButtons.count + 1) / 2
@@ -58,7 +51,6 @@ class ViewController: UIViewController {
         flipCount += 1
         if let cardNumber = cardButtons.index(of: sender) {
             print("cardNumber = \(cardNumber)")
-            // flipCard(withEmoji: emojiChoices[cardNumber], on: sender)
             game.chooseCard(at: cardNumber)
             updateViewFromModel()
         } else {
@@ -69,11 +61,7 @@ class ViewController: UIViewController {
     // MARK: - Private mehtods
     
     private func updateViewFromModel() {
-        // cardButtons is a sequence of buttons so we can loop through it.
-        // for button in cardButtons { }
-        // Countable range
-        // for index in 0..<cardButtons.count { }
-        
+
         // Countable range of all the indexes
         for index in cardButtons.indices {
             let button = cardButtons[index]
@@ -88,27 +76,7 @@ class ViewController: UIViewController {
         }
     }
     
-    private func flipCard(withEmoji emoji: String, on button: UIButton) {
-        print("flipcard(withEmoji: \(emoji)")
-        if button.currentTitle == emoji {
-            button.setTitle("", for: UIControlState.normal)
-            button.backgroundColor = #colorLiteral(red: 0.8862745098, green: 0.2431372549, blue: 0.3411764706, alpha: 1)
-        } else {
-            button.setTitle(emoji, for: UIControlState.normal)
-            button.backgroundColor = UIColor.hexStringToUIColor(hex: "e23e57")
-        }
-    }
-    
     private func emoji(for card: Card) -> String {
-        // Looking for value in a dictionary always returns an optional
-        // let choosenEmoji = emoji[card.identifier]
-        
-        // Another way of dealing with optionals
-//        if emoji[card.identifier] != nil {
-//            return emoji[card.identifier]!
-//        } else {
-//            return "!!!"
-//        }
         
         // We'll check if the card  doesn't  exist and assign it a random emoji
         if emoji[card.identifier] == nil, emojiChoices.count > 0 {
