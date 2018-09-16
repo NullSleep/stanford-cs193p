@@ -13,7 +13,7 @@ import Foundation
 struct Card: Hashable {
     var isFaceUp = false
     var isMatched = false
-    var identifier: Int
+    private var identifier: Int
     
     var hashValue: Int {
         return identifier

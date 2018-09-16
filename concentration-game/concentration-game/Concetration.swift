@@ -48,8 +48,8 @@ struct Concentration {
         if !cards[index].isMatched {
             // The indexOfOneAndOnlyFaceUpCard has to exist and we ignore if the user selected again the same card
             if let matchIndex = indexOfOneAndOnlyFaceUpCard, matchIndex != index {
-                // Check if cards match
-                if cards[matchIndex].identifier == cards[index].identifier {
+                // Check if cards match. Since Card implement Equatable we can compare both of them.
+                if cards[matchIndex] == cards[index] {
                     cards[matchIndex].isMatched = true
                     cards[index].isMatched = true
                 }
