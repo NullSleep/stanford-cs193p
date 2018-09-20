@@ -25,18 +25,24 @@ class ViewController: UIViewController {
         // Property observers. The code is observing change like this. Property observer should be used a
         // lot to update change from the UI.
         didSet {
-            flipCountLabel.text = "Flips: \(flipCount)"
+            updateCountLabel()
         }
     }
     
     var emoji = [Card:String]()
     
     // Swift can't infer the type that comes fom a UI file
-    @IBOutlet private weak var flipCountLabel: UILabel!
+    @IBOutlet private weak var flipCountLabel: UILabel! {
+        // When we have an Outlet didSet does get called when iOS makes the connection with the Outlet
+        didSet {
+            updateCountLabel()
+        }
+    }
     
     @IBOutlet private var cardButtons: [UIButton]!
     
-    var emojiChoices = ["🚀", "🚄", "🚉", "✈️", "🛫", "🏎", "⛴", "🛥", "🛩", "🚗", "🛰", "🚁",  "🚤", "🚅", "🏍",  "🚲"]
+    // var emojiChoices = ["🚀", "🚄", "🚉", "✈️", "🛫", "🏎", "⛴", "🛥", "🛩", "🚗", "🛰", "🚁",  "🚤", "🚅", "🏍",  "🚲"]
+    var emojiChoices = "🚀🚄🚉✈️🛫🏎⛴🛥🛩🚗🛰🚁🚤🚅🏍🚲"
     
     // MARK: - View's lifecycle
     
@@ -83,11 +89,21 @@ class ViewController: UIViewController {
             // Instead of just assigninig the emoji character we remove it also. Since the function remove inmediately
             // returns what is being removed we can both assign the emoji and delete from the list so it may not reappear
             // in a later asigment.
-            emoji[card] = emojiChoices.remove(at: emojiChoices.count.arc4Rrandom)
+            let randomStringIndex = emojiChoices.index(emojiChoices.startIndex, offsetBy: emojiChoices.count.arc4Rrandom)
+            emoji[card] = String(emojiChoices.remove(at: randomStringIndex))
         }
         
         // This is exactly the same as the above != nil coparison
         return emoji[card] ?? "!!!"
+    }
+    
+    private func updateCountLabel() {
+        let attributes: [NSAttributedStringKey: Any] = [
+            .strokeWidth: 5.0,
+            .strokeColor: #colorLiteral(red: 0.8196078431, green: 0.2980392157, blue: 0.3529411765, alpha: 1)
+        ]
+        let attributedString = NSAttributedString(string: "Flips: \(flipCount)", attributes: attributes)
+        flipCountLabel.attributedText = attributedString
     }
 }
 
