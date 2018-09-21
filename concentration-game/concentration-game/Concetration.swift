@@ -18,9 +18,7 @@ struct Concentration {
     // This index is used to know if there is a card face up and proceede to try to match the currently selected card
     private var indexOfOneAndOnlyFaceUpCard: Int? {
         get {
-            // faceUpCardIndices is of type: [Array, index]
-            let faceUpCardIndices = cards.indices.filter { cards[$0].isFaceUp }
-            return faceUpCardIndices.count == 1 ? faceUpCardIndices.first: nil
+            return cards.indices.filter { cards[$0].isFaceUp }.oneAndOnly
         }
         
         // We can name it anything we want, otherwise it defaults to newValue: set (newIndex){
@@ -75,5 +73,15 @@ struct Concentration {
             cards.remove(at: rand)
         }
         cards = res
+    }
+}
+
+// Collection is a generic type (array, dictionary, string) . Already has Element, a function count and a function first.
+extension Collection {
+    
+    // Returns the one and only thing in that collection or it will return nil.
+    var oneAndOnly: Element? {
+        // count and first are collection methods that already exist.
+        return count == 1 ? first : nil
     }
 }
