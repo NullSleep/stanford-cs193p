@@ -18,18 +18,9 @@ struct Concentration {
     // This index is used to know if there is a card face up and proceede to try to match the currently selected card
     private var indexOfOneAndOnlyFaceUpCard: Int? {
         get {
-            // From this declaration optionals always starts at nil
-            var foundIndex: Int?
-            for index in cards.indices {
-                if cards[index].isFaceUp {
-                    if foundIndex == nil {
-                        foundIndex = index
-                    } else {
-                        return nil
-                    }
-                }
-            }
-            return foundIndex
+            // faceUpCardIndices is of type: [Array, index]
+            let faceUpCardIndices = cards.indices.filter { cards[$0].isFaceUp }
+            return faceUpCardIndices.count == 1 ? faceUpCardIndices.first: nil
         }
         
         // We can name it anything we want, otherwise it defaults to newValue: set (newIndex){
