@@ -8,7 +8,7 @@
 
 import Foundation
 
-// class Concentration {
+// struct Concentration {
 struct Concentration {
     // MARK: - Application Program Interface
     

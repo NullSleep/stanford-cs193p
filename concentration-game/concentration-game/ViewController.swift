@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         return (cardButtons.count + 1) / 2
     }
     
+    // Initializing a variable doesn't initation the didSet
     private(set) var flipCount = 0 {
         // Property observers. The code is observing change like this. Property observer should be used a
         // lot to update change from the UI.
@@ -29,9 +30,10 @@ class ViewController: UIViewController {
         }
     }
     
-    var emoji = [Card:String]()
+    var emoji = [Card: String]()
     
-    // Swift can't infer the type that comes fom a UI file
+    // Swift can't infer the type that comes fom a UI file.
+    // iOS by default runs the didSet of an UI Outlet when they are connected.
     @IBOutlet private weak var flipCountLabel: UILabel! {
         // When we have an Outlet didSet does get called when iOS makes the connection with the Outlet
         didSet {

@@ -15,9 +15,7 @@ struct Card: Hashable {
     var isMatched = false
     private var identifier: Int
     
-    var hashValue: Int {
-        return identifier
-    }
+    var hashValue: Int { return identifier }
     
     static func ==(lhs: Card, rhs: Card) -> Bool {
         return lhs.identifier == rhs.identifier
