@@ -8,7 +8,7 @@
 
 import Foundation
 
-// Functions are first class types. They can be passed around as any other data structure
+// Functions are first class types. They can be passed around as any other data structure.
 
 class funcrtionTypes {
     

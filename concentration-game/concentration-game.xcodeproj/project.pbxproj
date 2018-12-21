@@ -17,7 +17,7 @@
 		23A7B17E2120242100C37667 /* concentration_gameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A7B17D2120242100C37667 /* concentration_gameUITests.swift */; };
 		23A7B1CB2124BD6E00C37667 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A7B1CA2124BD6E00C37667 /* UIColorExtension.swift */; };
 		23ABC0D7215ECFFF0069B2F8 /* CustomUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ABC0D6215ECFFF0069B2F8 /* CustomUIView.swift */; };
-		23FBDB0B21C5F16600EFEEB5 /* FunctionTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FBDB0A21C5F16600EFEEB5 /* FunctionTypes.swift */; };
+		23FBDB0B21C5F16600EFEEB5 /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FBDB0A21C5F16600EFEEB5 /* Closures.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,7 @@
 		23A7B17F2120242100C37667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23A7B1CA2124BD6E00C37667 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		23ABC0D6215ECFFF0069B2F8 /* CustomUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIView.swift; sourceTree = "<group>"; };
-		23FBDB0A21C5F16600EFEEB5 /* FunctionTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionTypes.swift; sourceTree = "<group>"; };
+		23FBDB0A21C5F16600EFEEB5 /* Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closures.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +94,8 @@
 				23A7B1CA2124BD6E00C37667 /* UIColorExtension.swift */,
 				23A7B16C2120242000C37667 /* Main.storyboard */,
 				23A7B1742120242100C37667 /* Info.plist */,
+				23FBDB0A21C5F16600EFEEB5 /* Closures.swift */,
 				23ABC0D6215ECFFF0069B2F8 /* CustomUIView.swift */,
-				23FBDB0A21C5F16600EFEEB5 /* FunctionTypes.swift */,
 			);
 			path = "concentration-game";
 			sourceTree = "<group>";
@@ -224,7 +224,7 @@
 				23A7B16B2120242000C37667 /* ViewController.swift in Sources */,
 				23A7B1692120242000C37667 /* AppDelegate.swift in Sources */,
 				23093A30212F649600113F6D /* Card.swift in Sources */,
-				23FBDB0B21C5F16600EFEEB5 /* FunctionTypes.swift in Sources */,
+				23FBDB0B21C5F16600EFEEB5 /* Closures.swift in Sources */,
 				23093A2E212F631100113F6D /* Concetration.swift in Sources */,
 				23A7B1CB2124BD6E00C37667 /* UIColorExtension.swift in Sources */,
 			);
