@@ -16,6 +16,7 @@
 		232AC8EE21CCD412005E2102 /* PlayingCardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232AC8ED21CCD412005E2102 /* PlayingCardUITests.swift */; };
 		232AC8FD21CCD4B3005E2102 /* PlayingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232AC8FC21CCD4B3005E2102 /* PlayingCard.swift */; };
 		232AC8FF21CCD90F005E2102 /* PlayingCardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 232AC8FE21CCD90F005E2102 /* PlayingCardDeck.swift */; };
+		234A6AE721D0013700D8C8E5 /* PlayingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234A6AE621D0013700D8C8E5 /* PlayingCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		232AC8EF21CCD412005E2102 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		232AC8FC21CCD4B3005E2102 /* PlayingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlayingCard.swift; path = PlayingCard/PlayingCard.swift; sourceTree = SOURCE_ROOT; };
 		232AC8FE21CCD90F005E2102 /* PlayingCardDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardDeck.swift; sourceTree = "<group>"; };
+		234A6AE621D0013700D8C8E5 /* PlayingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				232AC8CF21CCD410005E2102 /* ViewController.swift */,
 				232AC8FE21CCD90F005E2102 /* PlayingCardDeck.swift */,
 				232AC8FC21CCD4B3005E2102 /* PlayingCard.swift */,
+				234A6AE621D0013700D8C8E5 /* PlayingCardView.swift */,
 				232AC8D121CCD410005E2102 /* Main.storyboard */,
 				232AC8D421CCD412005E2102 /* Assets.xcassets */,
 				232AC8FB21CCD477005E2102 /* Supporting Files */,
@@ -273,6 +276,7 @@
 				232AC8D021CCD410005E2102 /* ViewController.swift in Sources */,
 				232AC8FF21CCD90F005E2102 /* PlayingCardDeck.swift in Sources */,
 				232AC8FD21CCD4B3005E2102 /* PlayingCard.swift in Sources */,
+				234A6AE721D0013700D8C8E5 /* PlayingCardView.swift in Sources */,
 				232AC8CE21CCD410005E2102 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -25,8 +25,6 @@ struct PlayingCard: CustomStringConvertible {
     // In this case we will specifally set the raw value
     enum Suit: String, CustomStringConvertible {
         
-        var description: String { return "\(self.rawValue)" }
-        
         case spades = "♠️"
         case diamonds = "♦️"
         case hearts = "♥️"
@@ -35,18 +33,11 @@ struct PlayingCard: CustomStringConvertible {
         //static var all: [Suit] = [.spades, .hearts, .diamonds, .clubs]
         // Equivalent way of crating the array of Suitss
         static var all = [Suit.spades, .hearts, .diamonds, .clubs]
+        
+        var description: String { return self.rawValue }
     }
     
     enum Rank: CustomStringConvertible {
-    
-        var description: String {
-            switch self {
-            case .ace: return "1"
-            case .numeric(let pips): return "\(pips)"
-            case .face(let kind): return kind
-            }
-            
-        }
     
         case ace
         case face(String) //J, Q, K
@@ -73,6 +64,15 @@ struct PlayingCard: CustomStringConvertible {
             }
             allRanks += [Rank.face("J"), face("Q"), face("K")]
             return allRanks
+        }
+        
+        var description: String {
+            switch self {
+            case .ace: return "A"
+            case .numeric(let pips): return "\(pips)"
+            case .face(let kind): return kind
+            }
+            
         }
     }
 }
