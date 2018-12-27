@@ -48,16 +48,27 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NUu-g4-1xZ">
+                                <rect key="frame" x="67" y="165" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="elp-IW-65d"/>
+                                    <constraint firstAttribute="width" constant="240" id="sVy-Bp-Vv4"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2xN-Q4-SCC" firstAttribute="centerY" secondItem="161-92-oU6" secondAttribute="centerY" id="KKY-TK-n0C"/>
+                            <constraint firstItem="NUu-g4-1xZ" firstAttribute="leading" secondItem="161-92-oU6" secondAttribute="leading" constant="67" id="XLd-fS-fOV"/>
+                            <constraint firstItem="NUu-g4-1xZ" firstAttribute="top" secondItem="161-92-oU6" secondAttribute="top" constant="91" id="fh3-Kc-m34"/>
                             <constraint firstItem="2xN-Q4-SCC" firstAttribute="centerX" secondItem="161-92-oU6" secondAttribute="centerX" id="uyZ-Uf-Tm5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="161-92-oU6"/>
                     </view>
                     <navigationItem key="navigationItem" id="08q-p7-M8j"/>
                     <connections>
+                        <outlet property="viewToAnimate" destination="NUu-g4-1xZ" id="xkd-3e-K82"/>
                         <segue destination="BYZ-38-t0r" kind="showDetail" identifier="Choose Theme from VC" id="sdK-Gi-0lH"/>
                     </connections>
                 </viewController>
@@ -339,7 +350,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xHO-T4-J4W" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uqq-Os-h9S">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                        <rect key="frame" x="0.0" y="24" width="375" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

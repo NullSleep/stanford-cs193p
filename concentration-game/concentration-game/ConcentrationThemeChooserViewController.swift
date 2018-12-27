@@ -10,11 +10,24 @@ import UIKit
 
 class ConcentrationThemeChooserViewController: UIViewController, UISplitViewControllerDelegate {
     
+    @IBOutlet weak var viewToAnimate: UIView!
+    
     let themes = [
         "Vehicles": "🚀🚄🚉✈️🛫🏎⛴🛥🛩🚗🛰🚁🚤🚅🏍🚲",
         "Animals":  "🐶🐷🦊🦉🐍🐝🐗🐺🦑🦞🦎🐋🦈🦛🦍🦒",
         "Faces":    "😀🥳😭🤪😖😕🥵🥶😱😨🥰🤣🤕😷😈🙄"
     ]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // Animations can't be on the viewDidLoad
+        animateSuplementaryView()
+    }
     
     // We do this to avoid the system running the first option in the MasterViewController from the SplitViewController as it automatically does.
     override func awakeFromNib() {
@@ -78,4 +91,30 @@ class ConcentrationThemeChooserViewController: UIViewController, UISplitViewCont
         }
     }
 
+}
+
+// MARK: - UIView Animations
+
+extension ConcentrationThemeChooserViewController {
+    
+    func animateSuplementaryView() {
+        
+        // For this to work the Alpha in the storyboard of viewToAnimate should be 1
+        if viewToAnimate.alpha == 1.0 {
+            UIViewPropertyAnimator.runningPropertyAnimator(
+                withDuration: 3.0,
+                delay: 2.0,
+                options: [.allowUserInteraction],
+                animations: { self.viewToAnimate.alpha = 0.0 },
+                completion: { if $0 == .end { self.viewToAnimate.removeFromSuperview() } }
+            )
+        }
+
+        print("alpha = \(viewToAnimate.alpha)")
+        
+        // For this to work the Alpha in the storyboard of viewToAnimate should be 0
+//        UIView.animate(withDuration: 3.0, animations: {
+//            self.viewToAnimate.alpha = 1.0
+//        })
+    }
 }
