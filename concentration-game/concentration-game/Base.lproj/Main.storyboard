@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Concentration Theme Chooser View Controller-->
+        <!--Concentration Theme ChooserVC-->
         <scene sceneID="dra-9S-Hg1">
             <objects>
-                <viewController id="4bq-I8-Iif" customClass="ConcentrationThemeChooserViewController" customModule="concentration_game" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4bq-I8-Iif" customClass="ConcentrationThemeChooserVC" customModule="concentration_game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CHw-cG-n1d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -350,7 +350,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xHO-T4-J4W" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uqq-Os-h9S">
-                        <rect key="frame" x="0.0" y="24" width="375" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

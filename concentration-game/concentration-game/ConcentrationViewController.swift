@@ -8,9 +8,13 @@
 
 import UIKit
 
-class ConcentrationViewController: UIViewController {
+class ConcentrationViewController: LoggingViewController {
     
     // MARK: - Instance variables
+    
+    override var vcLoggingName: String {
+        return "Game"
+    }
 
     // Using a lazy property. Since game depends on another property and it can be intialized inmediately, lazy allows to
     // only intialize until some ask for it.

@@ -8,7 +8,11 @@
 
 import UIKit
 
-class ConcentrationThemeChooserViewController: UIViewController, UISplitViewControllerDelegate {
+class ConcentrationThemeChooserVC: LoggingViewController, UISplitViewControllerDelegate {
+    
+    override var vcLoggingName: String {
+        return "ThemeChooser"
+    }
     
     @IBOutlet weak var viewToAnimate: UIView!
     
@@ -96,7 +100,7 @@ class ConcentrationThemeChooserViewController: UIViewController, UISplitViewCont
 
 // MARK: - UIView Animations
 
-extension ConcentrationThemeChooserViewController {
+extension ConcentrationThemeChooserVC {
     
     func animateSuplementaryView() {
         

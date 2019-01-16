@@ -104,5 +104,15 @@ class LoggingViewController: UIViewController {
         super.viewDidLayoutSubviews()
         logVCL("viewDidLayoutSubviews() bounds.size = \(view.bounds.size)")
     }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        logVCL("viewWillTransition(to: \(size) with: coordinator")
+        coordinator.animate(alongsideTransition: { (context: UIViewControllerTransitionCoordinatorContext!) -> Void in
+            self.logVCL("being animate(alongsideTransition:completion:)")
+        }, completion: { context -> Void in
+            self.logVCL("end animate(alongsideTransition:completion:)")
+        })
+    }
 
 }
