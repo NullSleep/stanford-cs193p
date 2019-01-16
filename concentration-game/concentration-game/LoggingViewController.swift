@@ -44,13 +44,65 @@ class LoggingViewController: UIViewController {
         if instanceCount == nil {
             instanceCount = LoggingViewController.bumpInstanceCount(for: vcLoggingName)
         }
-        print("\(LoggingViewController.logPrefix(for: vcLoggingName))(\(instanceCount))")
+        print("\(LoggingViewController.logPrefix(for: vcLoggingName))(\(instanceCount!)) \(msg)")
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        logVCL("init(coder:) - created view InterfaceBuilder")
+    }
+    
+    override init(nibName nibNameOrNil: String?, bundle bundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: bundleOrNil)
+        logVCL("init(nibName:bundle:) - create in code")
+    }
+    
+    deinit {
+        logVCL("Left the heap")
+    }
+    
+    override func awakeFromNib() {
+        logVCL("awakeFromNib()")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        logVCL("viewDidLoad()")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+         logVCL("viewWillAppear(animated = \(animated)")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        logVCL("viewDidAppear(animated = \(animated)")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        logVCL("viewWillDisappear(animated = \(animated)")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        logVCL("viewDidDisappear(animated = \(animated)")
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        logVCL("didReceiveMemoryWarning()")
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        logVCL("viewWillLayoutSubviews() bounds.size = \(view.bounds.size)")
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        logVCL("viewDidLayoutSubviews() bounds.size = \(view.bounds.size)")
     }
 
 }
