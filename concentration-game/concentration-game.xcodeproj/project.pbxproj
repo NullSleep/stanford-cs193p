@@ -10,6 +10,7 @@
 		23093A2E212F631100113F6D /* Concetration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23093A2D212F631100113F6D /* Concetration.swift */; };
 		23093A30212F649600113F6D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23093A2F212F649600113F6D /* Card.swift */; };
 		234A6AE521CE387A00D8C8E5 /* PlayingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234A6AE421CE387A00D8C8E5 /* PlayingCard.swift */; };
+		239F557C21EEA50700EEAD07 /* LoggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F557B21EEA50700EEAD07 /* LoggingViewController.swift */; };
 		23A3CDDD21D2C83300B3B4AF /* ConcentrationThemeChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A3CDDC21D2C83300B3B4AF /* ConcentrationThemeChooserViewController.swift */; };
 		23A7B1692120242000C37667 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A7B1682120242000C37667 /* AppDelegate.swift */; };
 		23A7B16B2120242000C37667 /* ConcentrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A7B16A2120242000C37667 /* ConcentrationViewController.swift */; };
@@ -36,6 +37,7 @@
 		23093A2D212F631100113F6D /* Concetration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concetration.swift; sourceTree = "<group>"; };
 		23093A2F212F649600113F6D /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		234A6AE421CE387A00D8C8E5 /* PlayingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCard.swift; sourceTree = "<group>"; };
+		239F557B21EEA50700EEAD07 /* LoggingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingViewController.swift; sourceTree = "<group>"; };
 		23A3CDDC21D2C83300B3B4AF /* ConcentrationThemeChooserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrationThemeChooserViewController.swift; sourceTree = "<group>"; };
 		23A7B1652120242000C37667 /* concentration-game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "concentration-game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A7B1682120242000C37667 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				234A6AE221CE37B000D8C8E5 /* Closures */,
 				234A6AE321CE37BD00D8C8E5 /* CustomViews */,
 				234A6AE121CE37A100D8C8E5 /* Enum */,
+				239F557B21EEA50700EEAD07 /* LoggingViewController.swift */,
 			);
 			path = "concentration-game";
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				23A7B1692120242000C37667 /* AppDelegate.swift in Sources */,
 				23A3CDDD21D2C83300B3B4AF /* ConcentrationThemeChooserViewController.swift in Sources */,
 				23093A30212F649600113F6D /* Card.swift in Sources */,
+				239F557C21EEA50700EEAD07 /* LoggingViewController.swift in Sources */,
 				23FBDB0B21C5F16600EFEEB5 /* Closures.swift in Sources */,
 				23093A2E212F631100113F6D /* Concetration.swift in Sources */,
 				23A7B1CB2124BD6E00C37667 /* UIColorExtension.swift in Sources */,

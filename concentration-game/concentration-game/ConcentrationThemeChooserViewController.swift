@@ -25,12 +25,13 @@ class ConcentrationThemeChooserViewController: UIViewController, UISplitViewCont
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        // Animations can't be on the viewDidLoad
         animateSuplementaryView()
     }
     
     // We do this to avoid the system running the first option in the MasterViewController from the SplitViewController as it automatically does.
     override func awakeFromNib() {
+        super.awakeFromNib()
+        
         splitViewController?.delegate = self
     }
     
@@ -100,7 +101,8 @@ extension ConcentrationThemeChooserViewController {
     func animateSuplementaryView() {
         
         // For this to work the Alpha in the storyboard of viewToAnimate should be 1
-        if viewToAnimate.alpha == 1.0 {
+        // We check if viewToAnimate exists because it's removed from the super view and might be nil
+        if let viewToAnimate = viewToAnimate, viewToAnimate.alpha == 1.0 {
             UIViewPropertyAnimator.runningPropertyAnimator(
                 withDuration: 3.0,
                 delay: 2.0,
@@ -108,10 +110,10 @@ extension ConcentrationThemeChooserViewController {
                 animations: { self.viewToAnimate.alpha = 0.0 },
                 completion: { if $0 == .end { self.viewToAnimate.removeFromSuperview() } }
             )
+            
+            print("alpha = \(viewToAnimate.alpha)")
         }
 
-        print("alpha = \(viewToAnimate.alpha)")
-        
         // For this to work the Alpha in the storyboard of viewToAnimate should be 0
 //        UIView.animate(withDuration: 3.0, animations: {
 //            self.viewToAnimate.alpha = 1.0
