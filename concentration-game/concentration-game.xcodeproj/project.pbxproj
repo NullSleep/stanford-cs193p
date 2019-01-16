@@ -20,6 +20,7 @@
 		23A7B17E2120242100C37667 /* concentration_gameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A7B17D2120242100C37667 /* concentration_gameUITests.swift */; };
 		23A7B1CB2124BD6E00C37667 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A7B1CA2124BD6E00C37667 /* UIColorExtension.swift */; };
 		23ABC0D7215ECFFF0069B2F8 /* CustomUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ABC0D6215ECFFF0069B2F8 /* CustomUIView.swift */; };
+		23AF1CAB21EFE3400053D5D6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23AF1CAA21EFE3400053D5D6 /* MapKit.framework */; };
 		23FBDB0B21C5F16600EFEEB5 /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FBDB0A21C5F16600EFEEB5 /* Closures.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		23A7B17F2120242100C37667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23A7B1CA2124BD6E00C37667 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		23ABC0D6215ECFFF0069B2F8 /* CustomUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIView.swift; sourceTree = "<group>"; };
+		23AF1CAA21EFE3400053D5D6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		23FBDB0A21C5F16600EFEEB5 /* Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closures.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23AF1CAB21EFE3400053D5D6 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +105,7 @@
 				23A7B1672120242000C37667 /* concentration-game */,
 				23A7B17C2120242100C37667 /* concentration-gameUITests */,
 				23A7B1662120242000C37667 /* Products */,
+				23AF1CA921EFE33F0053D5D6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,6 +154,14 @@
 				23A7B1712120242100C37667 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		23AF1CA921EFE33F0053D5D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23AF1CAA21EFE3400053D5D6 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
