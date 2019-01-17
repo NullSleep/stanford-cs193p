@@ -12,6 +12,7 @@ class ImageViewController: UIViewController {
 
     // MARK: - IBOutlets and class vars
 //    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     // As soon as scrollView gets hooked up by interface builder I'm going to ask scrollView to add a subView my ImageView
     @IBOutlet weak var scrollView: UIScrollView! {
@@ -48,7 +49,8 @@ class ImageViewController: UIViewController {
             imageView.image = newValue
             // Everytime I set my image I resize the imageView and the scrollView
             imageView.sizeToFit() // SizeToFit = Make yourself your intrinsic size
-            scrollView.contentSize = imageView.frame.size // The scrollView contentSize needs to updated for it to scroll
+            scrollView?.contentSize = imageView.frame.size // The scrollView contentSize needs to updated for it to scroll
+            spinner?.stopAnimating()
         }
     }
     
@@ -62,9 +64,9 @@ class ImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if imageURL == nil {
-            imageURL = DemoURLs.stanford
-        }
+//        if imageURL == nil {
+//            imageURL = DemoURLs.stanford
+//        }
     }
 
 }
@@ -85,9 +87,19 @@ extension ImageViewController {
 //            } catch let error {
 //            }
             
-            let urlContents = try? Data(contentsOf: url)
-            if let imageData = urlContents {
-                image = UIImage(data: imageData)
+            spinner.startAnimating()
+            // self = the ImageViewController instance may not exist any more, if loading the image takes too long the user might have left
+            // so in this intance it's important to have weak self
+            DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+                let urlContents = try? Data(contentsOf: url)
+                // Setting the image variable triggers it's computed property UI code for modifying the imageView and the scroll view which
+                // are UI elements and UI elements must only be updated in the Main Queue (thread)
+                DispatchQueue.main.async {
+                    // If too much time happened and we went back and then loaded a new image, we need to make sure they match
+                    if let imageData = urlContents, url == self?.imageURL {
+                        self?.image = UIImage(data: imageData)
+                    }
+                }
             }
         }
     }
