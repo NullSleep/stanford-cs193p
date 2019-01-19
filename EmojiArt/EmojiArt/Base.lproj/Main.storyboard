@@ -18,15 +18,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sdu-nW-6cD">
-                                <rect key="frame" x="387" y="354" width="593" height="316"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sdu-nW-6cD">
+                                <rect key="frame" x="0.0" y="24" width="1366" height="980"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6cR-qC-nTm" customClass="EmojiArtView" customModule="EmojiArt" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="1366" height="980"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="6cR-qC-nTm" firstAttribute="top" secondItem="Sdu-nW-6cD" secondAttribute="top" id="Fr1-TS-MeJ"/>
+                                    <constraint firstItem="6cR-qC-nTm" firstAttribute="leading" secondItem="Sdu-nW-6cD" secondAttribute="leading" id="HiK-Wg-TIl"/>
+                                    <constraint firstAttribute="trailing" secondItem="6cR-qC-nTm" secondAttribute="trailing" id="WUl-PM-yUh"/>
+                                    <constraint firstAttribute="bottom" secondItem="6cR-qC-nTm" secondAttribute="bottom" id="vBC-qH-9Uz"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Sdu-nW-6cD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mRO-eD-hpj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Sdu-nW-6cD" secondAttribute="bottom" id="pya-Pi-hCM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sdu-nW-6cD" secondAttribute="trailing" id="ruK-Qd-5xh"/>
+                            <constraint firstItem="Sdu-nW-6cD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ygy-WN-FfE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="dropZone" destination="Sdu-nW-6cD" id="pvc-C7-vSa"/>
+                        <outlet property="emojiArtView" destination="6cR-qC-nTm" id="Bcv-48-2x9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
