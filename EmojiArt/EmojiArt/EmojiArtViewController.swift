@@ -8,19 +8,24 @@
 
 import UIKit
 
-class EmojiArtViewController: UIViewController, UIDropInteractionDelegate {
-
+class EmojiArtViewController: UIViewController {
     @IBOutlet weak var dropZone: UIView! {
         didSet {
             dropZone.addInteraction(UIDropInteraction(delegate: self))
         }
     }
+    // This is for the background image
     @IBOutlet weak var emojiArtView: EmojiArtView!
     
+    var imageFetcher: ImageFetcher!
+    
+    // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+}
 
+extension EmojiArtViewController: UIDropInteractionDelegate {
     func dropInteraction(_ interaction: UIDropInteraction, canHandle session: UIDropSession) -> Bool {
         return session.canLoadObjects(ofClass: NSURL.self) && session.canLoadObjects(ofClass: UIImage.self)
     }
@@ -29,11 +34,9 @@ class EmojiArtViewController: UIViewController, UIDropInteractionDelegate {
         return UIDropProposal(operation: .copy)
     }
     
-    var imageFetcher: ImageFetcher!
-    
     func dropInteraction(_ interaction: UIDropInteraction, performDrop session: UIDropSession) {
-        // This function is not in the Main Queue
         imageFetcher = ImageFetcher() { (url, image) in
+            // This function does not respond in the main Main Queue, but we need to update the UI so we need to update it.
             DispatchQueue.main.async {
                 self.emojiArtView.backgroundImage = image
             }
