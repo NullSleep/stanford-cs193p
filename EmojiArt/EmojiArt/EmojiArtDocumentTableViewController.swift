@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EmojiArtTableViewController: UITableViewController {
+class EmojiArtDocumentTableViewController: UITableViewController {
     
     // My model
     var emojiArtDocuments = ["One", "Two", "Three"]
@@ -32,6 +32,14 @@ class EmojiArtTableViewController: UITableViewController {
     @IBAction func newEmojiArt(_ sender: UIBarButtonItem) {
         emojiArtDocuments += ["Untitled".madeUnique(withRespectTo: emojiArtDocuments)]
         tableView.reloadData()
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        // When this methods is called automatically by the system is ressiting the preferredDisplayMode
+        if splitViewController?.preferredDisplayMode != .primaryOverlay {
+           splitViewController?.preferredDisplayMode = .primaryOverlay
+        }
     }
 
     /*

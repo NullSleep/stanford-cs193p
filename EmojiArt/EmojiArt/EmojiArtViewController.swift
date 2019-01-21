@@ -9,15 +9,49 @@
 import UIKit
 
 class EmojiArtViewController: UIViewController {
+    // MARK: - Outlets and Class Variables
     @IBOutlet weak var dropZone: UIView! {
         didSet {
             dropZone.addInteraction(UIDropInteraction(delegate: self))
         }
     }
+    
+    @IBOutlet weak var scrollViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var scrollViewWidth: NSLayoutConstraint!
+    
+    @IBOutlet weak var scrollView: UIScrollView! {
+        didSet {
+            scrollView.minimumZoomScale = 0.1
+            scrollView.maximumZoomScale = 5.0
+            scrollView.delegate = self
+            scrollView.addSubview(emojiArtView)
+        }
+    }
+    
     // This is for the background image
-    @IBOutlet weak var emojiArtView: EmojiArtView!
+    var emojiArtView = EmojiArtView()
     
     var imageFetcher: ImageFetcher!
+    
+    var emojiArtBackgroundImage: UIImage? {
+        get {
+            return emojiArtView.backgroundImage
+        }
+        set {
+            scrollView?.zoomScale = 1.0
+            emojiArtView.backgroundImage = newValue
+            let size = newValue?.size ?? CGSize.zero
+            emojiArtView.frame = CGRect(origin: CGPoint.zero, size: size)
+            scrollView?.contentSize = size
+            
+            scrollViewHeight?.constant = scrollView.contentSize.height
+            scrollViewWidth?.constant = scrollView.contentSize.width
+            
+            if let dropZone = self.dropZone, size.width > 0, size.height > 0 {
+                scrollView?.zoomScale = max(dropZone.bounds.size.width / size.width, dropZone.bounds.size.height / size.height)
+            }
+        }
+    }
     
     // MARK: - View life cycle
     override func viewDidLoad() {
@@ -38,7 +72,7 @@ extension EmojiArtViewController: UIDropInteractionDelegate {
         imageFetcher = ImageFetcher() { (url, image) in
             // This function does not respond in the main Main Queue, but we need to update the UI so we need to update it.
             DispatchQueue.main.async {
-                self.emojiArtView.backgroundImage = image
+                self.emojiArtBackgroundImage = image
             }
         }
         session.loadObjects(ofClass: NSURL.self) { nsurls in
@@ -51,6 +85,17 @@ extension EmojiArtViewController: UIDropInteractionDelegate {
                 self.imageFetcher.backup = image
             }
         }
+    }
+}
+
+extension EmojiArtViewController: UIScrollViewDelegate {
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return emojiArtView
+    }
+    
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
+        scrollViewHeight.constant = scrollView.contentSize.height
+        scrollViewWidth.constant = scrollView.contentSize.width
     }
 }
 
