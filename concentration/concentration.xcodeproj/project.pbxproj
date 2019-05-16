@@ -97,11 +97,9 @@
 		2359D9472284F93900A2EA5C /* concentration */ = {
 			isa = PBXGroup;
 			children = (
-				2359D9482284F93900A2EA5C /* AppDelegate.swift */,
 				2359D94A2284F93900A2EA5C /* ViewController.swift */,
 				2359D94C2284F93900A2EA5C /* Main.storyboard */,
-				2359D94F2284F93A00A2EA5C /* Assets.xcassets */,
-				2359D9512284F93A00A2EA5C /* LaunchScreen.storyboard */,
+				2359D9772284FE4C00A2EA5C /* Supporting Files */,
 				2359D9542284F93A00A2EA5C /* Info.plist */,
 			);
 			path = concentration;
@@ -123,6 +121,16 @@
 				2359D96A2284F93B00A2EA5C /* Info.plist */,
 			);
 			path = concentrationUITests;
+			sourceTree = "<group>";
+		};
+		2359D9772284FE4C00A2EA5C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2359D9482284F93900A2EA5C /* AppDelegate.swift */,
+				2359D94F2284F93A00A2EA5C /* Assets.xcassets */,
+				2359D9512284F93A00A2EA5C /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

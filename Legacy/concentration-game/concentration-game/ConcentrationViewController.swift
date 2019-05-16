@@ -69,7 +69,7 @@ class ConcentrationViewController: LoggingViewController {
     
     @IBAction private func touchCard(_ sender: UIButton) {
         flipCount += 1
-        if let cardNumber = cardButtons.index(of: sender) {
+        if let cardNumber = cardButtons.firstIndex(of: sender) {
             print("cardNumber = \(cardNumber)")
             game.chooseCard(at: cardNumber)
             updateViewFromModel()
@@ -88,10 +88,10 @@ class ConcentrationViewController: LoggingViewController {
                 let button = cardButtons[index]
                 let card = game.cards[index]
                 if card.isFaceUp {
-                    button.setTitle(emoji(for: card), for: UIControlState.normal)
+                    button.setTitle(emoji(for: card), for: UIControl.State.normal)
                     button.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
                 } else {
-                    button.setTitle("", for: UIControlState.normal)
+                    button.setTitle("", for: UIControl.State.normal)
                     button.backgroundColor = card.isMatched ? #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0) : #colorLiteral(red: 0.8862745098, green: 0.2431372549, blue: 0.3411764706, alpha: 1)
                 }
             }
@@ -116,7 +116,7 @@ class ConcentrationViewController: LoggingViewController {
     }
     
     private func updateCountLabel() {
-        let attributes: [NSAttributedStringKey: Any] = [
+        let attributes: [NSAttributedString.Key: Any] = [
             .strokeWidth: 5.0,
             .strokeColor: #colorLiteral(red: 0.8196078431, green: 0.2980392157, blue: 0.3529411765, alpha: 1)
         ]

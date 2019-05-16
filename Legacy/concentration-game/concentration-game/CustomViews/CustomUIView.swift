@@ -34,7 +34,7 @@ class CustomUIView: UIView {
         // Accessing a range of characters in an NSAttributedString
         let pizzaJoint = "Café pesto"
         let attrString = NSMutableAttributedString(string: pizzaJoint)
-        let firstWordRange = pizzaJoint.startIndex..<pizzaJoint.index(of: " ")!
+        let firstWordRange = pizzaJoint.startIndex..<pizzaJoint.firstIndex(of: " ")!
         let nsrange = NSRange(firstWordRange, in: pizzaJoint)
         attrString.addAttribute(.strokeColor, value: UIColor.orange, range: nsrange)
         
