@@ -18,17 +18,24 @@ class ViewController: UIViewController {
         }
     }
     
+    //var emojiChoices: Array<String> = ["🛩", "🚅", "🏎", "🛥"]
+    var emojiChoices = ["🛩", "🚅", "🛩", "🚅"]
+    
     @IBOutlet weak var flipCountLabel: UILabel!
+    
+    // @IBOutlet var cardButtons: Array<UIButton>!
+    @IBOutlet var cardButtons: [UIButton]!
+    
+    // MARK: - Class Methods
     
     @IBAction func touchCard(_ sender: UIButton) {
         flipCount += 1
-        flipCard(withEmoji: "🚁", on: sender)
-    }
-    
-    @IBAction func touchSecondCard(_ sender: UIButton) {
-        flipCount += 1
-        flipCountLabel.text = "Flips: \(flipCount)"
-        flipCard(withEmoji: "🛩", on: sender)
+        if let cardNumber = cardButtons.firstIndex(of: sender) {
+            print("cardNumber = \(cardNumber)")
+            flipCard(withEmoji: emojiChoices[cardNumber], on: sender)
+        } else {
+            print("Card not found!")
+        }
     }
     
     func flipCard(withEmoji emoji: String, on button: UIButton) {
