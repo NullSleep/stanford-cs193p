@@ -1,5 +1,7 @@
-# Notes and Experiments from the Stanford University iOS 11 Course
+# Notes and Experiments from the Stanford University iOS Course
 Stanford University Developing Apps for iOS 11 CS193P
+Stanford University Developing Apps for iOS 13 CS193P
+
 
 All videos are on iTunesU (including English subtitles): https://goo.gl/FuVvUE
 
