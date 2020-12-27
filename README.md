@@ -4,7 +4,7 @@ Includes the 2 courses
 - Fall 2017 iOS 11, Xcode 9 and Swift 4:
 - Spring 2020 iOS 13, Swift 5 and SwiftUI
 
-## Resources for Fall 2017 CS193P:
+### Resources for Fall 2017 CS193P:
 - All videos on Youtube: https://www.youtube.com/playlist?list=PLPA-ayBrweUzGFmkT_W65z64MoGnKRZMq
 - All videos on iTunesU (including English subtitles): https://goo.gl/FuVvUE
 - Slides and other material provided by Stanford University can be found on my Google drive: https://goo.gl/1Skadp
@@ -13,5 +13,5 @@ Includes the 2 courses
   https://github.com/MichelDeiman
   https://github.com/MichelDeiman/CS193...
   
-## Resources for Sprint 2020 CS193P:
+### Resources for Sprint 2020 CS193P:
 - All videos on Youtube: https://www.youtube.com/playlist?list=PLpGHT1n4-mAtTj9oywMWoBx0dCGd51_yG
