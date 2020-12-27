@@ -1,14 +1,17 @@
-# Notes and Experiments from the Stanford University iOS Course
-Stanford University Developing Apps for iOS 11 CS193P
-Stanford University Developing Apps for iOS 13 CS193P
+# Stanford University Developing iOS Apps CS193P Course
 
+Includes the 2 courses
+- Fall 2017 iOS 11, Xcode 9 and Swift 4:
+- Spring 2020 iOS 13, Swift 5 and SwiftUI
 
-All videos are on iTunesU (including English subtitles): https://goo.gl/FuVvUE
-
-Slides and other material provided by Stanford University can be found on my Google drive: https://goo.gl/1Skadp
-
-Stanford CS 193P iPhone Application Development (not updated yet by Stanford): https://goo.gl/eTpObV
-
-All programming assignments will be subsequently published on my GitHub page:
-https://github.com/MichelDeiman
-https://github.com/MichelDeiman/CS193...
+## Resources for Fall 2017 CS193P:
+- All videos on Youtube: https://www.youtube.com/playlist?list=PLPA-ayBrweUzGFmkT_W65z64MoGnKRZMq
+- All videos on iTunesU (including English subtitles): https://goo.gl/FuVvUE
+- Slides and other material provided by Stanford University can be found on my Google drive: https://goo.gl/1Skadp
+- Stanford CS 193P iPhone Application Development (not updated yet by Stanford): https://goo.gl/eTpObV
+- All programming assignments will be subsequently published on my GitHub page:
+  https://github.com/MichelDeiman
+  https://github.com/MichelDeiman/CS193...
+  
+## Resources for Sprint 2020 CS193P:
+- All videos on Youtube: https://www.youtube.com/playlist?list=PLpGHT1n4-mAtTj9oywMWoBx0dCGd51_yG
