@@ -1,8 +1,8 @@
 # Stanford University Developing iOS Apps CS193P Course
 
 Includes the 2 courses
-- Fall 2017 iOS 11, Xcode 9 and Swift 4:
-- Spring 2020 iOS 13, Swift 5 and SwiftUI
+- 2017 Fall iOS 11, Xcode 9 and Swift 4:
+- 2020 Spring iOS 13, Swift 5 and SwiftUI
 
 ### Resources for Fall 2017 CS193P:
 - All videos on Youtube: https://www.youtube.com/playlist?list=PLPA-ayBrweUzGFmkT_W65z64MoGnKRZMq
@@ -12,6 +12,6 @@ Includes the 2 courses
 - All programming assignments will be subsequently published on my GitHub page:
   https://github.com/MichelDeiman
   https://github.com/MichelDeiman/CS193...
-  
-### Resources for Sprint 2020 CS193P:
+
+### Resources for Spring 2020 CS193P:
 - All videos on Youtube: https://www.youtube.com/playlist?list=PLpGHT1n4-mAtTj9oywMWoBx0dCGd51_yG
