@@ -1,6 +1,6 @@
 # Stanford University Developing iOS Apps CS193P Course
 
-Includes the 2 courses
+Includes 2 courses:
 - 2017 Fall iOS 11, Xcode 9 and Swift 4
 - 2020 Spring iOS 13, Swift 5 and SwiftUI
 
